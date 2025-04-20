@@ -1,4 +1,3 @@
-
 public class TextPreprocessor {
     public static String prepareText(String input) {
         StringBuilder sb = new StringBuilder();
