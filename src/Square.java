@@ -33,7 +33,8 @@ public class Square {
         }
         return null;
     }
-
-
+    public char getChar(int row, int col) {
+        return grid[row][col];
+    }
 }
 
