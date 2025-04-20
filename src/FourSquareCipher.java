@@ -28,4 +28,23 @@ public class FourSquareCipher {
 
         return ciphertext.toString();
     }
+
+    public String decrypt(String ciphertext){
+        StringBuilder plaintext = new StringBuilder();
+
+        for (int i = 0; i < ciphertext.length(); i += 2){
+            char a = ciphertext.charAt(i);
+            char b = ciphertext.charAt(i + 1);
+
+            int[] posA = cipherSquare1.findPosition(a);
+            int[] posB = cipherSquare2.findPosition(b);
+
+            char decA = plainSquare.getChar(posA[0], posB[1]);
+            char decB = plainSquare.getChar(posB[0], posA[1]);
+
+            plaintext.append(decA).append(decB);
+        }
+
+        return plaintext.toString();
+    }
 }

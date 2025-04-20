@@ -5,7 +5,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Four-Square Cipher");
 
-        System.out.println("Input Key 1: ");
+        System.out.println("Input Key 1: ");    
         String key1 = scanner.nextLine().toUpperCase().replaceAll("[^A-Z]", "");
 
         System.out.println("Input Key 2: ");
